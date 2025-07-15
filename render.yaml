@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: cooktimeapi
+    name: timeapi
     env: python
     buildCommand: ""
     startCommand: "python app.py"
