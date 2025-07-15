@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify
 from datetime import datetime
 import pytz
@@ -14,4 +15,5 @@ def get_time():
     })
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get("PORT", 10000))  # 10000 is fallback for local
+    app.run(host="0.0.0.0", port=port)
